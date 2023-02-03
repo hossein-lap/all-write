@@ -1,0 +1,88 @@
+baseurl = "/"
+theme = "mainroad"
+defaultContentLanguage = 'fa'
+paginate = "10"
+
+languagedirection = 'rtl'
+#title = "عنوان"
+keywords = ""
+copyright = 'CC BY-NC 4.0'
+readOtherPosts = "خواندن پست‌ها"
+
+[params]
+    mainSections = ["post", "blog", "news"]
+#    dateformat = "Jan 2, 2006"
+    dateformat = "2006-01-02" # Change the format of dates
+    toc = true
+    pager = true
+    readmore = true
+    opengraph = true # Enable OpenGraph if true
+    schema = true # Enable Schema
+#    dateformShort = "Jan 2"
+#    dateformNum = "2006-01-02"
+#    dateformNumTime = "2006-01-02 15:04"
+
+    # Subtitle for home
+    homeSubtitle = "A simple and beautiful blog"
+
+    # Set disableReadOtherPosts to true in order to hide the links to other posts.
+#    disableReadOtherPosts = false
+
+    # Enable sharing buttons, if you like
+#    enableSharingButtons = false
+
+    # Metadata mostly used in document's head
+    description = "My new homepage or blog"
+    keywords = "homepage, blog"
+    images = [""]
+    post_meta = ["author", "date", "categories"]
+
+    [Params.sidebar]
+        home = "left"
+        list = "right"
+        single = false
+#        widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+        widgets = ["search", "taglist", "recent"]
+
+    [Params.widgets]
+        recent_num = 5 # Set the number of articles in the "Recent articles" widget
+        categories_counter = true # Enable counter for each category in "Categories" widget
+        tags_counter = true # Enable counter for each tag in "Tags" widget
+
+        [Params.widgets.search]
+            url = "https://duckduckgo.com/"
+
+            [Params.widgets.search.input]
+                name = "sites"
+                pre = ""
+
+[taxonomies]
+    category = "blog"
+    tag = "tags"
+    series = "series"
+
+[languages.fa]
+    title = "عنوان"
+    subtitle = "یک مثال ساده با hugo"
+
+    [languages.fa.params.logo]
+        logoText = "hello friend ng"
+        logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+    # And you can even create generic menu
+    [[menu.main]]
+        identifier = "about"
+        name = "درباره ما"
+        url = "/about"
+    [[menu.main]]
+        identifier = "blog"
+        name = "وبلاگ"
+        url = "/post"
+    [[menu.main]]
+        identifier = "projects"
+        name = "پروژه‌ها"
+        url = "/projects"
